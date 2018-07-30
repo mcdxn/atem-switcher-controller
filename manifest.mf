@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+X-COMMENT: Main-Class will be added automatically by build
+Permissions: all-permissions
+Codebase: *
+Trusted-Only: true
+Trusted-Library: true
+Application-Library-Allowable-Codebase: *
+Caller-Allowable-Codebase: *
+Bundle-ClassPath: *

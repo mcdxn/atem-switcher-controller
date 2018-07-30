@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>lemsib Test</title>
+
+</head>
+<body onload="runInit()">
+
+<applet mayscript="mayscript" legacy_lifecycle=true id="app" archive="dist/JavaApplication1.jar" code="Testing" width=0 height=0>
+</applet>
+<script type="text/javascript" src="TheSwitcherJS.js"></script>
+<div style="background-color: lightblue; margin-left: auto; margin-right: auto; width: 900px;">
+<div style="margin-top: 30px; margin-bottom: 30px; margin-left: 50px; margin-right: auto;">
+<br>
+    
+<p id="test_results"></p>
+
+<p id="connect_results">Connect Result:</p>
+<form>
+Enter Switcher IP Address:
+<input type="text" id="ip_address">
+<input id="btn_connectToSwitcher" type="button" onclick="connectToSwitcher('ip_address')" value="CONNECT">
+<input id="btn_enumerateInput" disabled type="button" onclick="enumerateInput()" value="LIST PORTS">
+
+</form>
+<br>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div>
+<p>
+Source:
+<select name="inputlist" id="source1" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination1" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitch('source1','destination1')" value="PROGRAM">
+</p>
+</div>
+<div>
+<p>
+Source:
+<select name="inputlist" id="source2" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination2" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitch('source2','destination2')" value="PROGRAM">
+<br>
+<input name="btn_performSwitch" type="button" onclick="performDualSwitch('source1','destination1','source2','destination2')" value="*">
+
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div>
+<p>
+Source:
+<select name="inputlist" id="source3" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination3" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source3','destination3')" value="AUX SWITCH">
+</p>
+</div>
+<div>
+<p>
+Source:
+<select name="inputlist" id="source4" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination4" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source4','destination4')" value="AUX SWITCH">
+<br>
+<input name="btn_performSwitch" type="button" onclick="performDualSwitch('source3','destination3','source4','destination4')" value="*">
+</p>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div>
+<p>
+Source:
+<select name="inputlist" id="source5" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination5" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source5','destination5')" value="AUX SWITCH">
+</p>
+</div>
+<div>
+<p>
+Source:
+<select name="inputlist" id="source6" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination6" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source6','destination6')" value="AUX SWITCH">
+<br>
+<input name="btn_performSwitch" type="button" onclick="performDualSwitch('source5','destination5','source6','destination6')" value="*">
+</p>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div>
+<p>
+Source:
+<select name="inputlist" id="source7" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination7" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source7','destination7')" value="AUX SWITCH">
+</p>
+</div>
+<div>
+<p>
+Source:
+<select name="inputlist" id="source8" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination8" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source8','destination8')" value="AUX SWITCH">
+<br>
+<input name="btn_performSwitch" type="button" onclick="performDualSwitch('source7','destination7','source8','destination8')" value="*">
+</p>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div>
+<p>
+Source:
+<select name="inputlist" id="source9" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination9" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source9','destination9')" value="AUX SWITCH">
+</p>
+</div>
+<div>
+<p>
+Source:
+<select name="inputlist" id="source10" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination10" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source10','destination10')" value="AUX SWITCH">
+<br>
+<input name="btn_performSwitch" type="button" onclick="performDualSwitch('source9','destination9','source10','destination10')" value="*">
+</p>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div>
+<p>
+Source:
+<select name="inputlist" id="source11" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination11" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source11','destination11')" value="AUX SWITCH">
+</p>
+</div>
+<div>
+<p>
+Source:
+<select name="inputlist" id="source12" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>---></b>&nbsp;&nbsp;Destination:
+<select name="outputlist" id="destination12" style="width: 200px;">
+</select>
+&nbsp;&nbsp;<b>=</b>&nbsp;&nbsp;<input name="btn_performSwitch" type="button" onclick="performSwitchByAuxSourceChange('source12','destination12')" value="AUX SWITCH">
+<br>
+<input name="btn_performSwitch" type="button" onclick="performDualSwitch('source11','destination11','source12','destination12')" value="*">
+</p>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<br>
+<br>
+</div>
+</div>
+</body>
+</html>
+
+<!-- <div style="background-color:Lightgray; width: 300px; height: 400px; overflow: auto; overflow-y: scroll;">
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+</div> -->
